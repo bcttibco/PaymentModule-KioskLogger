@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:enq="http://www.example.org/wsdl/Enquiryservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EnquiryService" targetNamespace="http://www.example.org/wsdl/Enquiryservice">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://www.example.org/wsdl/Enquiryservice">
+      <xsd:element name="GetPaymentDetailsRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="PaymentEntity" type="xsd:string"/>
+            <xsd:element name="ContractID" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPaymentDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ContractID" type="xsd:string"/>
+                        <xsd:element name="Amount" type="xsd:string"/>
+                        <xsd:element name="MinAmount" type="xsd:string"/>
+                        <xsd:element name="MaxAmount" type="xsd:string"/>
+                    </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+                    </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPaymentDetailsRequest">
+    <wsdl:part element="enq:GetPaymentDetailsRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPaymentDetailsResponse">
+    <wsdl:part element="enq:GetPaymentDetailsResponse" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetRequest">
+    <wsdl:part element="enq:GetRequest" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetResponse">
+    <wsdl:part element="enq:GetResponse" name="parameters"/>
+  </wsdl:message>
+    <wsdl:portType name="EnquiryService">
+    <wsdl:operation name="GetPaymentDetails">
+      <wsdl:input message="enq:GetPaymentDetailsRequest" name="GetPaymentDetailsInput"/>
+      <wsdl:output message="enq:GetPaymentDetailsResponse" name="GetPaymentDetailsOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+    <wsdl:portType name="PaymentEnquiry">
+    <wsdl:operation name="Get">
+      <wsdl:input message="enq:GetRequest" name="GetInput"/>
+      <wsdl:output message="enq:GetResponse" name="GetOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/bct.solutions.kiosk.UIfacade.module/Service Descriptors/bct.solutions.kiosk.uifacade.restapi.PaymentEnquiry-Enquiry.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://bct.solutions.kiosk/PaymentEnquiry"
+}]}

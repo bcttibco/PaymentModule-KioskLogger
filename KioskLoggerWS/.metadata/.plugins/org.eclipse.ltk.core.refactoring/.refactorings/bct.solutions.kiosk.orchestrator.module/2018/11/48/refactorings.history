@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;bct.solutions.kiosk.orchestrator.module/Processes/bct/solutions/kiosk/orchestrator/module/BackendRoutingProcess.bwp&apos; to &apos;RoutingProcess.bwp&apos;" description="Rename resource &apos;BackendRoutingProcess.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/bct/solutions/kiosk/orchestrator/module/BackendRoutingProcess.bwp" name="RoutingProcess.bwp" stamp="1543392933083" updateReferences="true"/>
+</session>

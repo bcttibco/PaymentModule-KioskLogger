@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:pesch="http://bct.solutions.kiosk/schema/paymentenquiryschema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://bct.solutions.kiosk/schema/paymentenquiryschema">
+  <element name="GetPaymentDetailsRequest">
+    <complexType>
+      <sequence>
+        <element name="PaymentEntity" type="string"/>
+        <element name="ContractID" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="GetPaymentDetailsResponse">
+    <complexType>
+      <sequence>
+        <element name="ContractID" type="string"/>
+        <element name="Amount" type="string"/>
+        <element name="MinAmount" type="string"/>
+        <element name="MaxAmount" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;bct.solutions.kiosk.corebanking.module/Processes/bct/solutions/kiosk/corebanking/module/Process.bwp&apos; to &apos;AccountingEntry.bwp&apos;" description="Rename resource &apos;Process.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/bct/solutions/kiosk/corebanking/module/Process.bwp" name="AccountingEntry.bwp" stamp="1543393162983" updateReferences="true"/>
+</session>

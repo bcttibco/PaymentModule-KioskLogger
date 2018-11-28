@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:enqws="http://www.example.org/wsdl/1543340566980" xmlns:extns="http://bct.solutions.kiosk/schema/paymentenquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentEnquiry" targetNamespace="http://www.example.org/wsdl/1543340566980">
+  <wsdl:import namespace="http://bct.solutions.kiosk/schema/paymentenquiry"/>
+  <wsdl:message name="GetRequest">
+    <wsdl:part element="extns:EnquiryRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetResponse">
+    <wsdl:part element="extns:EnquiryResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PaymentEnquiry">
+    <wsdl:operation name="Get">
+      <wsdl:input message="enqws:GetRequest" name="GetInput"/>
+      <wsdl:output message="enqws:GetResponse" name="GetOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

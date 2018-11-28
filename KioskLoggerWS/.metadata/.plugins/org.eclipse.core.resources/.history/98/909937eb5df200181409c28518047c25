@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://bct.solutions.kiosk/PaymentEnquiry" xmlns:pews="http://bct.solutions.kiosk/paymentenquiry/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentEnquiry" targetNamespace="http://bct.solutions.kiosk/paymentenquiry/wsdl">
+  <wsdl:import namespace="http://bct.solutions.kiosk/PaymentEnquiry"/>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://bct.solutions.kiosk/paymentenquiry/wsdl">
+      <xsd:element name="GetRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+            <xsd:element minOccurs="0" ref="empty"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRequest">
+    <wsdl:part element="pews:GetRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetResponse">
+    <wsdl:part element="pews:GetResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PaymentEnquiry">
+    <wsdl:operation name="Get">
+      <wsdl:input message="pews:GetRequest" name="GetInput"/>
+      <wsdl:output message="pews:GetResponse" name="GetOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

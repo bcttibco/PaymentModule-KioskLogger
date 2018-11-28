@@ -1,0 +1,78 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/enquiry" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-enquiry",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "PaymentProvider",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "ContractID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a EnquiryResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/EnquiryResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ResultStatus" : {
+      "type" : "object",
+      "required" : [ "ErrorDescription", "ErrorCode" ],
+      "properties" : {
+        "ErrorCode" : {
+          "type" : "string"
+        },
+        "ErrorDescription" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EnquiryResponse" : {
+      "type" : "object",
+      "required" : [ "ResultStatus" ],
+      "properties" : {
+        "ResultStatus" : {
+          "$ref" : "#/definitions/ResultStatus"
+        },
+        "ContractID" : {
+          "type" : "string"
+        },
+        "Amount" : {
+          "type" : "string"
+        },
+        "MinAmount" : {
+          "type" : "string"
+        },
+        "MaxAmount" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

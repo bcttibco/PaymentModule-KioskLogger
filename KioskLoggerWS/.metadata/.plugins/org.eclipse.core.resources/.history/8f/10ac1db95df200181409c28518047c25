@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:enq="http://bct.solutions.kiosk/PaymentEnquiry" elementFormDefault="qualified" targetNamespace="http://bct.solutions.kiosk/PaymentEnquiry">
+
+
+    <complexType name="HeaderType">
+    	<sequence>
+    		<element name="Source" type="string"/>
+    		<element name="Destination" type="string"/>
+    		<element name="Timestamp" type="string"/>
+    		<element name="System" type="string"/>
+    		<element name="ServiceType" type="string"/>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="EnquiryRequestType">
+    	<sequence>
+    		
+    		<element name="Header" type="enq:HeaderType"></element>
+    		<element maxOccurs="1" minOccurs="1" name="ProviderName"
+    			type="string">
+    		</element>
+    		<element maxOccurs="1" minOccurs="0" name="PaymentRefNumber"
+    			type="string">
+    		</element>
+    		<element maxOccurs="1" minOccurs="1" name="ContractID"
+    			type="string" />
+    	</sequence>
+    </complexType>
+
+    <complexType name="EnquiryResponseType">
+    	<sequence>
+    		<element name="Result" type="enq:ResultStatusType"></element>
+    		<element maxOccurs="1" minOccurs="0" name="ContractID"
+    			type="string" />
+    		<element maxOccurs="1" minOccurs="0" name="Amount"
+    			type="string" />
+    		<element maxOccurs="1" minOccurs="0" name="MinAmount"
+    			type="string" />
+    		<element maxOccurs="1" minOccurs="0" name="MaxAmount"
+    			type="string" />
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ResultStatusType">
+    	<sequence>
+    		<element maxOccurs="1" minOccurs="1" name="ErrorCode" type="string"/>
+    		<element maxOccurs="1" minOccurs="1" name="ErrorDescription" type="string"/>
+    	</sequence>
+    </complexType>
+
+    <element name="EnquiryRequest" type="enq:EnquiryRequestType"/>
+    
+    <element name="EnquiryResponse" type="enq:EnquiryResponseType"/>
+
+  <!--  <element name="Header" type="enq:HeaderType"/>
+    
+    <element name="Result" type="enq:ResultStatusType"/> -->
+    
+</schema>

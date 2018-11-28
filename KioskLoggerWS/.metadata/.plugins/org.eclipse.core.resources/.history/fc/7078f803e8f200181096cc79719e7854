@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:wsdl_1543384166931="http://www.example.org/wsdl/1543384166931" xmi:id="_fxdMcPJXEeiAF85XAiaLLg" targetNamespace="http://tns.tibco.com/bw/composite/bct.solutions.kiosk.UIfacade.module" name="bct.solutions.kiosk.UIfacade.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_aJ9YAPLREei5X_CWF7dKFQ" name="PaymentEnquiry" promote="ComponentPaymentEnquiry/PaymentEnquiry">
+    <sca:interface.wsdl xmi:id="_aJ9_EfLREei5X_CWF7dKFQ" interface="http://www.example.org/wsdl/1543384166931#wsdl.interface(PaymentEnquiry)" scaext:wsdlLocation="../Service%20Descriptors/PaymentEnquiry.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_arPRYPLXEeiO7MXOEFd3fQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/4de46aeef5e84e779a74dd03378ad924/SOAPServiceBinding" portTypeQName="wsdl_1543384166931:PaymentEnquiry" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bct.solutions.kiosk.UIfacade.module/Service%20Descriptors/PaymentEnquiry.wsdl">
+      <bindingType xmi:id="_ar28cPLXEeiO7MXOEFd3fQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_dIf-APLXEeiO7MXOEFd3fQ" endpointURI="/SOAPServiceBinding/paymentEnquiry/" httpConnector="bct.solutions.kiosk.shared.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_ar6m0PLXEeiO7MXOEFd3fQ" operationName="Get" action="Get" actionNeeded="true">
+        <bindingType xmi:id="_ar6m0fLXEeiO7MXOEFd3fQ"/>
+        <messageConfiguration xmi:id="_ar6m0vLXEeiO7MXOEFd3fQ" messageQName="wsdl_1543384166931:GetRequest" wsdlLocation="platform:/resource/bct.solutions.kiosk.UIfacade.module/Service%20Descriptors/PaymentEnquiry.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_ar6m0_LXEeiO7MXOEFd3fQ" partName="parameters" partElementName="wsdl_1543384166931:GetRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_ar6m1PLXEeiO7MXOEFd3fQ" messageQName="wsdl_1543384166931:GetResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bct.solutions.kiosk.UIfacade.module/Service%20Descriptors/PaymentEnquiry.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_ar6m1fLXEeiO7MXOEFd3fQ" partName="parameters" partElementName="wsdl_1543384166931:GetResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_ar7N4PLXEeiO7MXOEFd3fQ">
+          <inputMapping xmi:id="_ar708PLXEeiO7MXOEFd3fQ"/>
+          <outputMapping xmi:id="_ar708fLXEeiO7MXOEFd3fQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ar8cAPLXEeiO7MXOEFd3fQ" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:service xmi:id="_EXQesPLnEeih18FFcWxyqA" name="Service" promote="Component1PaymentEnquiry/Service">
+    <sca:interface.wsdl xmi:id="_EXYagPLnEeih18FFcWxyqA" interface="http://xmlns.example.com/20181128122353#wsdl.interface(Service)" scaext:wsdlLocation="../Service%20Descriptors/PaymentEnquiryService.wsdl"/>
+  </sca:service>
+  <sca:service xmi:id="_EXZBkvLnEeih18FFcWxyqA" name="enquiry" promote="Component1PaymentEnquiry/enquiry">
+    <sca:interface.wsdl xmi:id="_EXZoo_LnEeih18FFcWxyqA" interface="http://xmlns.example.com/20181128122353PLT#wsdl.interface(enquiry)" scaext:wsdlLocation="../Processes/bct/solutions/kiosk/uifacade/restapi/PaymentEnquiry.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_EXquYPLnEeih18FFcWxyqA" name="RestService" path="/enquiry" docBasePath="http://localhost:7777/bct.solutions.kiosk.UIfacade.module" docResourcePath="Enquiry" basePath="/" connector="bct.solutions.kiosk.uifacade.module.Enquiry" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bct.solutions.kiosk.uifacade.restapi.PaymentEnquiry-Enquiry.json">
+      <operation xmi:id="_EX6mAPLnEeih18FFcWxyqA" operationName="get" nickname="get-enquiry" httpMethod="GET" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_EYz94PLnEeih18FFcWxyqA"/>
+      <advancedConfig xmi:id="_EXuYwPLnEeih18FFcWxyqA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_EX6mAfLnEeih18FFcWxyqA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_h94nwPJXEeiAF85XAiaLLg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-fEsPJXEeiAF85XAiaLLg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-lyYPJXEeiAF85XAiaLLg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-tHIPJXEeiAF85XAiaLLg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-0b4PJXEeiAF85XAiaLLg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h-7woPJXEeiAF85XAiaLLg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h_DFYPJXEeiAF85XAiaLLg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h_MPUPJXEeiAF85XAiaLLg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_h_ULIPJXEeiAF85XAiaLLg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_g_eewPJXEeiAF85XAiaLLg" name="ComponentPaymentEnquiry" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_g_gT8PJXEeiAF85XAiaLLg" processName="bct.solutions.kiosk.uifacade.module.PaymentEnquiry"/>
+    <sca:service xmi:id="_aJ67wPLREei5X_CWF7dKFQ" name="PaymentEnquiry">
+      <sca:interface.wsdl xmi:id="_aJ67wfLREei5X_CWF7dKFQ" interface="http://www.example.org/wsdl/1543384166931#wsdl.interface(PaymentEnquiry)" scaext:wsdlLocation="../Service%20Descriptors/PaymentEnquiry.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_EXFfkPLnEeih18FFcWxyqA" name="Component1PaymentEnquiry" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_EXFfkfLnEeih18FFcWxyqA" processName="bct.solutions.kiosk.uifacade.restapi.PaymentEnquiry"/>
+    <sca:service xmi:id="_EXK_IPLnEeih18FFcWxyqA" name="Service">
+      <sca:interface.wsdl xmi:id="_EXMNQPLnEeih18FFcWxyqA" interface="http://xmlns.example.com/20181128122353#wsdl.interface(Service)" scaext:wsdlLocation="../Service%20Descriptors/PaymentEnquiryService.wsdl"/>
+    </sca:service>
+    <sca:service xmi:id="_EXZBkPLnEeih18FFcWxyqA" name="enquiry">
+      <sca:interface.wsdl xmi:id="_EXZBkfLnEeih18FFcWxyqA" interface="http://xmlns.example.com/20181128122353PLT#wsdl.interface(enquiry)" scaext:wsdlLocation="../Processes/bct/solutions/kiosk/uifacade/restapi/PaymentEnquiry.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://www.example.org/wsdl/1543384166931" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentEnquiry" targetNamespace="http://www.example.org/wsdl/1543384166931">
+  <wsdl:types>
+    <xsd:schema xmlns:extns="http://bct.solutions.kiosk/PaymentEnquiry" elementFormDefault="unqualified" targetNamespace="http://www.example.org/wsdl/1543384166931">
+      <xsd:import namespace="http://bct.solutions.kiosk/PaymentEnquiry"/>
+      <xsd:element name="GetRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" ref="extns:EnquiryRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+                        <xsd:element minOccurs="0" ref="extns:EnquiryResponse"/>
+                    </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRequest">
+    <wsdl:part element="tns:GetRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetResponse">
+    <wsdl:part element="tns:GetResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PaymentEnquiry">
+    <wsdl:operation name="Get">
+      <wsdl:input message="tns:GetRequest" name="GetInput"/>
+      <wsdl:output message="tns:GetResponse" name="GetOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

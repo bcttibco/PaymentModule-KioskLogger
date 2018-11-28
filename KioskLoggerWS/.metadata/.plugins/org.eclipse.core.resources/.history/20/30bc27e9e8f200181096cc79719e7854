@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_UX1VcPLeEeih18FFcWxyqA" targetNamespace="http://tns.tibco.com/bw/composite/bct.solutions.kiosk.orchestrator.module" name="bct.solutions.kiosk.orchestrator.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_VCwhwPLeEeih18FFcWxyqA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDHuIPLeEeih18FFcWxyqA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDStQPLeEeih18FFcWxyqA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDceQPLeEeih18FFcWxyqA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDkaEPLeEeih18FFcWxyqA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDru0PLeEeih18FFcWxyqA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VDzqoPLeEeih18FFcWxyqA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VEGlkPLeEeih18FFcWxyqA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VEQWkPLeEeih18FFcWxyqA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_UjsnMPLeEeih18FFcWxyqA" name="ComponentPaymentEnquiry" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UjsnMfLeEeih18FFcWxyqA" processName="bct.solutions.kiosk.orchestrator.module.PaymentEnquiry"/>
+  </sca:component>
+</sca:composite>

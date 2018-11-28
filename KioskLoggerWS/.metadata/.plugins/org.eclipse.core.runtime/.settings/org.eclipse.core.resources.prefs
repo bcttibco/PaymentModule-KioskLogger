@@ -1,0 +1,4 @@
+description.buildorder=bct.solutions.kiosk.shared.module/bct.solutions.kiosk.UIfacade.module/bct.solutions.kiosk.UIfacade.module.application/bct.solutions.kiosk.orchestrator.module/bct.solutions.kiosk.orchestrator.module.application/bct.solutions.kiosk.utilityproviders.module/bct.solutions.kiosk.utilityproviders.module.application
+description.defaultbuildorder=false
+eclipse.preferences.version=1
+version=1

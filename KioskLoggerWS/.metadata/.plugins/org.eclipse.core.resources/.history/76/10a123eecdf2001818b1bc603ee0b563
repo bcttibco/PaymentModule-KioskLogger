@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:enqsch="http://bct.solutions.kiosk/schema/paymentenquiry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://bct.solutions.kiosk/schema/paymentenquiry">
+  <element name="GetRequest">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="GetResponse">
+    <complexType>
+      <sequence>
+        <element name="out" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>
